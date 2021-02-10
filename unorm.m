@@ -1,19 +1,11 @@
 function B = unorm(A)
-% FUNCTION NAME:
-%   unorm
+% UNORM Normalizes all values of a matrix or vector to [0,1]
 %
-% DESCRIPTION:
-%   Normalizes all values of a matrix or vector to [0,1]
-%
-% INPUT:
-%   A - (double) A matrix or vector 
-%
-% OUTPUT:
-%   B - (double) A normalized matrix or vector with all elements in [0,1]
-%
-% REVISION HISTORY:
-%   2021-02-10 - mjg
-%       * Initial implementation
+% EXAMPLE USAGE
+% B = unorm(A); 
+% 
+% HISTORY
+% 2021-02-10 Final version; MJG
 
 % --- 
 
