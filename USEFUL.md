@@ -1,7 +1,7 @@
 # Useful Matlab Code 
 Just some handy Matlab notes 
 
-### Get all files in directory of specific type
+### Files/Folders: Get all files in directory of specific type
 Search directory and return all files of a specified type\
 
 ```matlab
@@ -9,7 +9,7 @@ allScans = dir([DDIR '*.raw']);
 nScans = size(allScans, 1);
 ```
 
-### Binary blob outlines
+### Binary: Blob outlines
 Plot the outline of all binary blobs in an image\
 *Keywords: binary blob outlines outlay overlay trace edges lines*
 
@@ -21,7 +21,7 @@ for k = 1:length(B)
 end
 ```
 
-### Create a folder if it doesn't exist
+### Files/Folders: Create a folder if it doesn't exist
 Checks the existance of a folder and, if it doesn't exist, creates it\
 *Keywords: folder exists create folder check if*
 
@@ -31,8 +31,7 @@ if ~exist(yourFolder, 'dir')
 end
 ```
 
-
-### Burn text
+### Images: Burn text
 Burns text into an RGB image, overwriting the pixel (matrix element) values\
 *Keywords: burn text rgb insert text*
 
@@ -40,7 +39,7 @@ Burns text into an RGB image, overwriting the pixel (matrix element) values\
 RGB = insertText(I, [yposition xposition], 'text');
 ```
 
-### If variable check takes forever
+### Matlab: If variable check takes forever
 In some installs of Matlab, when you type a variable/function that does not exist, Matlab will take *forever* to realize it doesn't exist. This happens because Matlab is searching all possible directories for that variable/function. In the Command Window, enter the following:\
 *Keywords: missing variable function taking takes forever*
 
@@ -58,7 +57,7 @@ s.matlab.desktop.currentfolder.History.PersonalValue = {''}
 
 and then restart Matlab. 
 
-### Fullscreen a figure
+### Images: Fullscreen a figure
 After creating a figure, add the following line to make it full screen.\
 *Keywords: fullscreen figure full screen enlarge full window enlarge window figure*
 
@@ -94,7 +93,7 @@ imsFiles = natsort(ims.Files)
 
 Note: natsort() is from Stephen Cobeldick's code [here](https://www.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort)
 
-### Remove small binary blobs
+### Binary: Remove small blobs
 Removes blobs from a binary image below a threshold area (pixel count)\
 *Keywords: beneath certain size smaller than less than greater than*
 
@@ -102,7 +101,7 @@ Removes blobs from a binary image below a threshold area (pixel count)\
 bw = bwareaopen(bw, pixelSizeThreshold);
 ```
 
-### Get the second-smallest/largest element
+### Math: Get the second-smallest/largest element
 Get the value/index of the *second*-largest/smallest element in a vector\
 *Keywords: second smallest largest biggest minimum maximum element index indicies sort*
 
@@ -113,7 +112,7 @@ Get the value/index of the *second*-largest/smallest element in a vector\
 [a,b] = maxk(vector, 2);
 ```
 
-### First '1' in every row/col
+### Binary: First '1' in every row/col
 Gets the indices of the first (top-down/left-right) non-zero element of each row/col\
 *Keywords: first 1 in every row nonzero*
 
@@ -124,7 +123,7 @@ Gets the indices of the first (top-down/left-right) non-zero element of each row
 x = [min(a,[],1); max(a,[],1)];
 ```
 
-### Blob location
+### Binary: Blob location
 Get a binary blob number based on pixel coordinates\
 *Keywords: *
 
@@ -133,7 +132,7 @@ labeledImage = bwlabel(binaryImage);
 blobNumber = labeledImage(row, col);
 ```
 
-### Maximum values in array matrix
+### Math: Maximum values in array matrix
 Get the top-3 largest values in a Matrix\
 
 ```matlab
@@ -144,8 +143,7 @@ top3 = sortedInds(1:3)
 [i, j] = ind2sub(size(X), top3);
 ```
 
-
-### Select every other element
+### Math: Select every other element
 Get even or odd numbers in a vector\
 *Keywords: even odd vector*
 
@@ -154,7 +152,7 @@ Aodd = A(1:2:end);          % Odd-Indexed Elements
 Aeven = A(2:2:end);         % Even-Indexed Elements
 ```
 
-### Find first/last instance
+### Binary: Find first/last instance
 Find the first/last instance of a value in a vector\
 
 ```matlab
@@ -188,7 +186,7 @@ bwdist
 
 Explanation [here](https://www.mathworks.com/help/images/ref/bwdist.html).
 
-### Percent Increase/Decrease/Change Functions
+### Math: Percent Increase/Decrease/Change Functions
 The simple formulas for percent increase/decrease/change in matlab\
 
 ```matlab
@@ -197,7 +195,7 @@ decrease = (old - new)/old * 100;
 change = (new - old)/old * 100;
 ```
 
-### Matlab Rectange
+### Images: Matlab Rectangle
 Plots a rectangle into the figure window\
 
 ```matlab
@@ -255,7 +253,7 @@ Remove all blobs from a binary image except the *n* largest\
 bw = bwareafilt(bw, n);
 ```
 
-### Get *n* largest elements
+### Math: Get *n* largest elements
 The the *n* largest elements in a vector. Note, this can also be done with Matlab's `maxk` function.
 
 ```matlab
@@ -274,14 +272,18 @@ imwrite(im, 'filename.png', 'PNG');
 saveas(gcf, 'filename.png', 'PNG');
 ```
 
-### Matrices: Remove rows of all zeros
-From a matrix, remove all rows that contain nothing but zeros.
+### Matrices: Remove rows of all zeros, two ways
+Method 1: From a matrix `A`, remove all rows that contain nothing but zeros and save the result as matrix `B`\
+Method 2: For a matrix `A`, remove all rows that contain nothing but zeros, overwriting the original matrix `A`
 
 ```matlab
+% Method 1 
 B = A(any(A,2),:);
+% Method 2
+A(all(A==0, 2), :) = [];
 ```
 
-### Scale Intensity
+### Images: Scale Intensity
 Scale a matrix (image) `I` to be between `L1` (min) and `L2` (max)
 
 ```matlab
@@ -304,7 +306,7 @@ n = n/norm(n);
 distance = norm( (a-p) - (dot((a-p),n))*n );
 ```
 
-### Convert a 3D binary matrix to XYZ points
+### OCT: Convert a 3D binary matrix to XYZ points
 Given `point_cloud`, a 3D matrix of binary elements, convert it into XYZ points in the form of XYZ_pz = [x1 y1 z1; x2 y2 z2; ...]\
 *Keywords: point_cloud pointCloud point cloud*
 
@@ -326,7 +328,7 @@ Used primarily in ThorLabs OCT data processing, convert an *n* by 3 matrix of XY
 XYZ_mm = bsxfun(@times, XYZ_px, ratio_mm);
 ```
 
-### Fit a 2D line 
+### Math: Fit a 2D line 
 Easy 2D interpolation\
 *Keywords: polyfit fit line interpolation*
 
@@ -371,15 +373,7 @@ centroids = cat(1,s.Centroid);
 plot(centroids(:,1), centroids(:,2), 'bo');
 ```
 
-
-
----
-pegged for removal; peg 
-    % Remove: Rough centerpoints pegged for removal
-remove all zeros zero
-    centerpts(all(centerpts== 0, 2), :) = [];
-
-### Concatenate a string/filename
+### Files/Folders: Concatenate a string/filename
 Useful for building filenames. As an example, let's say you have *n* images in the directory `C:\path\to\something\`. Each image is in the format: `filename_####.png`, where `####` is a four-digit string. To loop through each:
 
 ```matlab
