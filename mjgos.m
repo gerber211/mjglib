@@ -1,12 +1,13 @@
-function stats(A)
-% SS Calculates and outputs simply summary statistics on a matrix or vector
+function mjgos(A)
+% MJGOS Calculates and outputs simply summary statistics on a matrix or vector
 %    This is similar to summary() in 2020b
 %
 % EXAMPLE USAGE
-% ss(A); 
+% mjgos(A); 
 % 
 % HISTORY
 % 2021-02-11 Initial version; MJG
+% 2021-02-12 Changed the name of the function to MJGOS.m
 
 % --- 
 
