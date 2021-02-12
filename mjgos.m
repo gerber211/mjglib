@@ -5,6 +5,9 @@ function mjgos(A)
 % EXAMPLE USAGE
 % mjgos(A); 
 % 
+% EXAMPLE OUTPUT:
+% Mean: 25.789198; Median: 18.962447; STD: 21.396650; Min: 0.434676; Max: 86.214617; RMS: 33.441309
+%
 % HISTORY
 % 2021-02-11 Initial version; MJG
 % 2021-02-12 Changed the name of the function to MJGOS.m
