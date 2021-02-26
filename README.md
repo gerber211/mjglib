@@ -12,7 +12,7 @@ Step-by-step instructions on use of the library:
 
 1. Click on "Code" in the top-right (green button)
 1. Select "Download ZIP"
-1. Extract .zip file somewhere onto your computer;\ For example, to: 'C:\Program Files\MATLAB\R2020a\toolbox\mjglib-main'
+1. Extract .zip file somewhere onto your computer; For example, to: 'C:\Program Files\MATLAB\R2020a\toolbox\mjglib-main'
 3. Open Matlab (if not already open)
 4. Type 'userpath' in the Command Window. It should give you something like 'C:\Users\Matt Gerber\Documents\MATLAB'
 5. Create a Matlab file in that directory and save it as 'startup.m'
