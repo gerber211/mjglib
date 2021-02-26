@@ -12,11 +12,11 @@ Step-by-step instructions on use of the library:
 
 1. Click on "Code" in the top-right (green button)
 1. Select "Download ZIP"
-1. Extract .zip file somewhere onto your computer; For example, to: 'C:\Program Files\MATLAB\R2020a\toolbox\mjglib-main'
-1. Open Matlab (if not already open)
-1. Type 'userpath' in the Command Window. It should give you something like 'C:\Users\Matt Gerber\Documents\MATLAB'
-1. Create a Matlab file in that directory and save it as 'startup.m'
-1. In startup.m, add the following code:
+1. Extract .zip file somewhere onto your computer;\ For example, to: 'C:\Program Files\MATLAB\R2020a\toolbox\mjglib-main'
+3. Open Matlab (if not already open)
+4. Type 'userpath' in the Command Window. It should give you something like 'C:\Users\Matt Gerber\Documents\MATLAB'
+5. Create a Matlab file in that directory and save it as 'startup.m'
+6. In startup.m, add the following code:
 
 ```matlab
 % Define path to the library
@@ -35,4 +35,4 @@ else
 end
 ```
 
-If done correctly, the above steps will "permanently" add the folder 'mjglib-main' to Matlab's search path. Further reading [here](https://www.mathworks.com/matlabcentral/answers/116177-how-to-add-a-folder-permanently-to-matlab-path).
+If correctly done, the above steps will "permanently" add the folder 'mjglib-main' to Matlab's search path. Further reading [here](https://www.mathworks.com/matlabcentral/answers/116177-how-to-add-a-folder-permanently-to-matlab-path).
