@@ -6,6 +6,7 @@ List of functions and brief description:
 * [__stats__](https://github.com/gerber211/mjglib/blob/main/stats.m) - Output summary statistics of a matrix or vector 
 * [__circshift_columns__](https://github.com/gerber211/mjglib/blob/main/circshift_columns.m) - Circularly shift each column of a matrix by an amount specified in a vector; adopted and modified from Stuart Layton's code [here](https://www.mathworks.com/matlabcentral/fileexchange/37687-circular-shift-columns)
 * [__bwclearborder__](https://github.com/gerber211/mjglib/blob/main/bwclearborder.m) - Clear true pixels touching the border of a binary image; This does the same thing as IMCLEARBORDER in Matlab, but is much faster and works only on binary images
+* [__data2rgb__](https://github.com/gerber211/mjglib/blob/main/data2rgb.m) - Convert ThorLabs ImageData.data file to RGB image data. 
 
 # How to Use
 Step-by-step instructions on use of the library:
