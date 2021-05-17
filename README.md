@@ -1,4 +1,4 @@
-# Function List
+# Function & File List
 List of functions and brief description: 
 
 * [__unorm__](https://github.com/gerber211/mjglib/blob/main/unorm.m) - Normalizes a vector or matrix to \[0,1\] for all elements
@@ -9,6 +9,7 @@ List of functions and brief description:
 * [__data2rgb__](https://github.com/gerber211/mjglib/blob/main/data2rgb.m) - Convert ThorLabs ImageData.data file to RGB image data. 
 * [__raw2png__](https://github.com/gerber211/mjglib/blob/main/raw2png.m) - Convert a folder of .raw OCT data (Thorlabs) into PNG files --- requires [__unorm__](https://github.com/gerber211/mjglib/blob/main/unorm.m).
 * [__png2movie__](https://github.com/gerber211/mjglib/blob/main/png2movie.m) - Convert a folder of PNG files into an AVI movie file. 
+* [__calc_RCM_metrics_v1__](https://github.com/gerber211/mjglib/blob/main/calc_RCM_metrics_v1.m) - Calculate H2-norm RCM from series of 3D centerlines. 
 
 # How to Use
 Step-by-step instructions on use of the library:
