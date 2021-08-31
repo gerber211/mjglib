@@ -9,6 +9,16 @@ allScans = dir([DDIR '*.raw']);
 nScans = size(allScans, 1);
 ```
 
+### Files/Folders: Add training slash if one doesn't exist 
+Adds trailing slash to string if it does not exist\
+*Keywords: trailing slash folder file path*
+
+```matlab
+if PATH_2_LABELS(end) ~= filesep
+    PATH_2_LABELS(end+1) = filesep;
+end 
+```
+
 ### Binary: Blob outlines
 Plot the outline of all binary blobs in an image\
 *Keywords: binary blob outlines outlay overlay trace edges lines*
