@@ -9,6 +9,16 @@ allScans = dir([DDIR '*.raw']);
 nScans = size(allScans, 1);
 ```
 
+### Loops: Do something every n-th iteration
+On a loop through ii, do something everything n-th iteration\
+*Keywords: mod loop every nth n-th iteration*
+
+```matlab
+if mod(ii, nn) == 0
+% do something
+end
+```
+
 ### Files/Folders: Add training slash if one doesn't exist 
 Adds trailing slash to string if it does not exist\
 *Keywords: trailing slash folder file path*
