@@ -266,8 +266,8 @@ vert_count = sum(bw==1, 1);
 horz_count = sum(bw==1, 2);
 ```
 
-### Binary: Keep largest n blobs
-Remove all blobs from a binary image except the *n* largest\
+### Binary: Keep/Retain largest n blobs
+Remove all blobs from a binary image except the *n* largest (retain n largest blobs)
 
 ```matlab
 bw = bwareafilt(bw, n);
