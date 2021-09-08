@@ -286,10 +286,10 @@ There are two ways of saving an image: `saveas` and `imwrite`. For raw data, `im
 
 ```matlab
 % save matrix of data as image
-imwrite(im, 'filename.png', 'PNG');
+imwrite(im, 'filename.png', 'png');
 
 % save Matlab figure window as image
-saveas(gcf, 'filename.png', 'PNG');
+saveas(gcf, 'filename.png', 'png');
 ```
 
 ### Matrices: Remove rows of all zeros, two ways
