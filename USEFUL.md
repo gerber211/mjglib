@@ -29,6 +29,16 @@ if PATH_2_LABELS(end) ~= filesep
 end 
 ```
 
+### Binary: xy points to binary
+Convert a set of xy coordinates (points) to a binary image \
+*Keywords: xy x,y points coordinates binary ind2sub sub2ind*
+
+```matlab
+bw = false(m, n); 
+idx = sub2ind(size(bw), y, x);
+bw(idx) = true;
+```
+
 ### Binary: Blob outlines
 Plot the outline of all binary blobs in an image\
 *Keywords: binary blob outlines outlay overlay trace edges lines*
