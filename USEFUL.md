@@ -35,7 +35,7 @@ Convert a set of xy coordinates (points) to a binary image \
 
 ```matlab
 bw = false(m, n); 
-idx = sub2ind(size(bw), y, x);
+idx = sub2ind(size(bw), x, y);
 bw(idx) = true;
 ```
 
