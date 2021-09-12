@@ -5,7 +5,7 @@ Just some handy Matlab notes
 Preallocate a 3d matrix\
 
 ```matlab
-A = zeros(nRows nCols, nPlanes);
+A = zeros(nRows, nCols, nPlanes);
 ```
 
 ### Files/Folders: Get all files in directory of specific type
