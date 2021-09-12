@@ -1,6 +1,13 @@
 # Useful Matlab Code 
 Just some handy Matlab notes 
 
+### Preallocate 3D matrix
+Preallocate a 3d matrix\
+
+```matlab
+A = zeros(nRows nCols, nPlanes);
+```
+
 ### Files/Folders: Get all files in directory of specific type
 Search directory and return all files of a specified type\
 
