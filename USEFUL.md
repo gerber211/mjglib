@@ -1,5 +1,12 @@
 # Useful Matlab Code 
-Just some handy Matlab notes 
+Handy Matlab notes; 便利だよね～
+
+### Convert 2D binary to xy
+Convert a 2D binary image/matrix into (x,y) points; note the yx order 
+
+```matlab
+[y, x] = ind2sub(size(A), find(A));
+```
 
 ### Preallocate 3D matrix
 Preallocate a 3d matrix\
