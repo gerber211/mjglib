@@ -1,6 +1,15 @@
 # Useful Matlab Code 
 Handy Matlab notes; 便利だよね～
 
+### Plot a 2D circle
+With center point (xc,yc) and radius r; just get the xy points 
+
+```matlab
+th = 0:pi/50:2*pi;
+xs = r * cos(th) + xc;
+ys = r * sin(th) + yc;
+```
+
 ### Convert 2D binary to xy
 Convert a 2D binary image/matrix into (x,y) points; note the yx order 
 
