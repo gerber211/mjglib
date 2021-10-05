@@ -10,6 +10,13 @@ xs = r * cos(th) + xc;
 ys = r * sin(th) + yc;
 ```
 
+### Unique string
+Generate a unique, time-based string for file saves, etc. 
+
+```matlab
+timestamp = datestr(now,'YYYY-mm-DD_HHMMSSFFF'); 
+```
+
 ### Convert 2D binary to xy
 Convert a 2D binary image/matrix into (x,y) points; note the yx order 
 
